@@ -5,6 +5,9 @@ const port = 5000;
 
 const list = ['apple', 'banana', 'orange'];
 
+app.get('/list', (req, res) => {
+    res.json(list);
+});
 app.use(express.static('public'));
 app.use(express.json()); // Middleware for parsing JSON
 
